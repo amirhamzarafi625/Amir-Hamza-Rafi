@@ -1,148 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amir Hamza Rafi | Portfolio</title>
 
-<title>Amir Hamza Rafi | Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
-}
-
-/* NAVBAR */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background: #020617;
-}
-
-nav h2 {
-    margin: 0;
-}
-
-nav a {
-    color: #38bdf8;
-    margin-left: 15px;
-    text-decoration: none;
-}
-
-/* HERO */
-.hero {
-    padding: 80px 20px;
-}
-
-.hero h1 {
-    font-size: 48px;
-}
-
-.hero span {
-    color: #38bdf8;
-}
-
-/* SECTION */
-section {
-    padding: 50px 20px;
-}
-
-/* CARD */
-.card {
-    background: #1e293b;
-    padding: 20px;
-    margin: 15px auto;
-    border-radius: 10px;
-    max-width: 800px;
-}
-
-/* BUTTON */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #38bdf8;
-    color: black;
-    border-radius: 5px;
-    margin-top: 10px;
-    text-decoration: none;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-    margin-top: 30px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 32px;
+  <!-- Styles -->
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --dark: #111827;
+      --light: #f9fafb;
     }
-}
-</style>
-</head>
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: white;
+      color: var(--primary);
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e0e7ff;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      text-align: center;
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .about p {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+      gap: 15px;
+    }
+
+    .contact input, .contact textarea {
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      background: var(--primary);
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact button:hover {
+      background: #3730a3;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f3f4f6;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
 <body>
 
-<!-- NAVBAR -->
-<nav>
-    <h2>Amir</h2>
-    <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+  <!-- Hero Section -->
+  <header>
+    <h1>Amir Hamza Rafi</h1>
+    <p>Web Developer | Designer | Portfolio Showcase</p>
+    <a class="btn" href="#contact">Contact Me</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m Amir Hamza Rafi, a passionate web developer specializing in creating responsive and modern websites. I love turning ideas into real digital experiences using HTML, CSS, and JavaScript.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A modern personal portfolio website built with HTML, CSS, and JS.</p>
+      </div>
+      <div class="project">
+        <h3>ToDo App</h3>
+        <p>Simple task management web app using vanilla JavaScript.</p>
+      </div>
+      <div class="project">
+        <h3>Landing Page Design</h3>
+        <p>Responsive landing page layout with clean UI and animations.</p>
+      </div>
     </div>
-</nav>
+  </section>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Hi, I'm <span>Amir Hamza Rafi</span> 👋</h1>
-    <p>Freelancer | Interior Designer | Hospitality Experience</p>
-    <a href="#contact" class="btn">Hire Me</a>
-</div>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-<!-- ABOUT -->
-<section id="about">
-    <div class="card">
-        <h2>About Me</h2>
-        <p>I am Amir Hamza Rafi, from Bangladesh, currently living in Portugal.</p>
-        <p>I have experience in freelancing, hospitality, supermarkets, and interior designing.</p>
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-    <div class="card">
-        <h2>Skills</h2>
-        <p>✔ Freelancing</p>
-        <p>✔ Interior Design</p>
-        <p>✔ Customer Service</p>
-        <p>✔ Communication</p>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: amirhamzarafi625@gmail.com</p>
-        <p>
-            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
-            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
-            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-        </p>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Amir Hamza Rafi</p>
-</footer>
+  <footer>
+    &copy; 2026 Amir Hamza Rafi | All rights reserved
+  </footer>
 
 </body>
 </html>
